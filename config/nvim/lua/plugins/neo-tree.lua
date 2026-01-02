@@ -3,17 +3,21 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
     'MunifTanjim/nui.nvim',
+    'nvim-tree/nvim-web-devicons',
   },
   lazy = false,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    close_if_last_window = true,
     filesystem = {
       filtered_items = {
         visible = true,
+      },
+      follow_current_file = {
+        enabled = true,
       },
       window = {
         mappings = {
