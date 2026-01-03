@@ -16,4 +16,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy and import plugins
-require('lazy').setup({{import = "plugins"}, {import = "plugins.lsp"}})
+require('lazy').setup({{import = "apitman.plugins"}, {import = "apitman.plugins.lsp"}})

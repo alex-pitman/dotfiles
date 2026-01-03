@@ -1,6 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- Tabs & indentation
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2

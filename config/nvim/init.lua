@@ -1,3 +1,3 @@
 require('apitman.core')
-require('lazy-bootstrap')
-require('lsp')
+require('apitman.lazy')
+require('apitman.lsp')
