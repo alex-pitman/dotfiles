@@ -4,6 +4,7 @@ Install the following with brew:
 * ghostty
 * zoxide
 * tmux
+* lazygit
 * neovim (0.11 or later)
 * ripgrep (needed for telescope live grep)
 * tree-sitter-cli (needed to download/compile treesitter parsers)
