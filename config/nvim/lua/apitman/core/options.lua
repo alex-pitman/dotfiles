@@ -12,6 +12,7 @@ vim.o.scrolloff = 10
 vim.o.inccommand = "split" -- preview substitutions
 vim.o.signcolumn = "yes" -- always keep the sign column on
 vim.o.winborder = "rounded"
+vim.o.colorcolumn = "120"
 
 -- editor
 vim.o.breakindent = true

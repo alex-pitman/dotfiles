@@ -38,6 +38,9 @@ return {
         colors.fg_gutter = fg_gutter
         colors.fg_sidebar = fg_dark
       end,
+      on_highlights = function(h1, colors)
+        h1.ColorColumn = { bg = "#0a2030" }
+      end,
     })
 
     vim.cmd.colorscheme("tokyonight-night")
