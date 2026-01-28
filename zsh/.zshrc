@@ -7,7 +7,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -15,6 +15,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ---- zoxide (better cd) ----
 eval "$(zoxide init zsh)"
@@ -45,4 +48,4 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 alias tmc="cat ~/repos/dotfiles/tmux/tmux-cheatsheet.md"
-export PATH="$HOME/go/bin:$PATH"
+# export PATH="$HOME/go/bin:$PATH"
