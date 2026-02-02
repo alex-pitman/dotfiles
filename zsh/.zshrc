@@ -17,8 +17,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ---- zoxide (better cd) ----
-eval "$(zoxide init zsh)"
-alias cd="z"
+if [ -z "$DISABLE_ZOXIDE" ]; then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
 
 # ---- eza (better ls) ----
 alias ls="eza --all --icons=always"
