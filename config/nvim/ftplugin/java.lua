@@ -41,10 +41,36 @@ local function get_settings()
         -- Enforce code blocks when generating code
         useBlocks = true,
       },
+      -- Configure completion options
+      completion = {
+        --Set static members to suggest in completion without requiring an import
+        favoriteStaticMembers = {
+          "org.hamcrest.MatcherAssert.assertThat",
+          "org.hamcrest.Matchers.*",
+          "org.hamcrest.CoreMatchers.*",
+          "org.junit.jupiter.api.Assertions.*",
+          "java.util.Objects.requireNonNull",
+          "java.util.Objects.requireNonNullElse",
+          "org.mockito.Mockito.*",
+        },
+        -- Set the import order for organizing imports
+        importOrder = {
+          "java",
+          "javax",
+          "com",
+          "org",
+        },
+      },
+      -- Allow navigation into decompiled .class files
+      contentProvider = {
+        preferred = "fernflower",
+      },
       -- Download sources for eclipse projects
       eclipse = {
         downloadSources = true,
       },
+      -- Enable implementation count CodeLens ("all", "types", or "methods")
+      implementationCodeLens = "all",
       -- Enable inlay hints for parameter names
       inlayHints = {
         parameterNames = {
@@ -54,6 +80,14 @@ local function get_settings()
       -- Download sources for maven/gradle projects
       maven = {
         downloadSources = true,
+      },
+      -- Enable refences count CodeLens
+      referencesCodeLens = {
+        enabled = true,
+      },
+      -- Auto organize imports on save
+      saveActions = {
+        organizeImports = true,
       },
       -- Enable method signature help
       signatureHelp = {
@@ -82,6 +116,7 @@ local function setup_keymaps(bufnr)
   map("n", "<leader>jc", jdtls.extract_constant, "[J]ava Extract [C]onstant")
   map("n", "<leader>jt", jdtls.test_nearest_method, "[J]ava [T]est Method")
   map("n", "<leader>jT", jdtls.test_class, "[J]ava [T]est Class")
+  map("n", "<leader>jb", jdtls.compile, "[J]ava [B]uild")
 
   -- Visual mode keymaps
   map("v", "<leader>jm", function()
@@ -122,6 +157,9 @@ local function setup_jdtls()
       require("jdtls.dap").setup_dap_main_class_configs()
     end, 1000)
     setup_keymaps(bufnr)
+
+    -- Refresh CodeLens
+    vim.lsp.codelens.refresh()
   end
 
   -- Create the jdtls config
