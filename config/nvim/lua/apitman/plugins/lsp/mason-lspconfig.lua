@@ -10,8 +10,11 @@ return {
       "graphql",
       "jdtls",
       "lua_ls",
-      "protols",
+      -- "protols",
       "ts_ls",
+    },
+    automatic_enable = {
+      exclude = { "jdtls" }, -- nvim-jdtls handles startup
     },
   },
 }
