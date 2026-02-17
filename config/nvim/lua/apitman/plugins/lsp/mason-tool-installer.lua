@@ -12,6 +12,9 @@ return {
 
       -- Lua tools
       "stylua",
+
+      -- Node tools
+      "prettier",
     },
   },
 }
