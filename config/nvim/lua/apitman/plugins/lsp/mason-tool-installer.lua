@@ -5,6 +5,9 @@ return {
       "gofumpt",
       "goimports",
       "stylua",
+
+      -- Node tools
+      "prettier",
     },
   },
 }
