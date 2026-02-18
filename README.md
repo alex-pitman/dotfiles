@@ -1,3 +1,7 @@
+# Dotfiles
+
+![screenshot](images/setup-screenshot.png)
+
 #### Prerequisites:
 Install the following with brew:
 * stow
