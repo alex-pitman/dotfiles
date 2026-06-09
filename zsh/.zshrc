@@ -44,6 +44,9 @@ ghs() {
   gh search code $1 --owner=$GITHUB_OWNER --web
 }
 alias repush="git commit --amend --no-edit && git push origin HEAD --force-with-lease"
+gwt() {
+  git worktree add -b $1 ../$1
+}
 
 # nvm setup
 export NVM_DIR="$HOME/.nvm"
@@ -52,3 +55,8 @@ export NVM_DIR="$HOME/.nvm"
 
 alias tmc="cat ~/repos/dotfiles/tmux/tmux-cheatsheet.md"
 # export PATH="$HOME/go/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alexander.pitman/.lmstudio/bin"
+# End of LM Studio CLI section
+
