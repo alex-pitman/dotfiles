@@ -1,23 +1,25 @@
-brew "bat"
-brew "eza"
-brew "fastfetch"
-brew "gh"
-brew "git"
-brew "go"
-brew "lazygit"
-brew "neovim"
-brew "ripgrep"
-brew "opencode"
-brew "python@3.13"
-brew "powerlevel10k"
-brew "stow"
-brew "tmux"
-brew "tree-sitter-cli"
-brew "zoxide"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-cask "claude-code"
-cask "corretto@21"
-cask "dbeaver-community"
-cask "docker-desktop"
-cask "ghostty"
+cask "bruno"                    # Replaces Postman
+cask "claude-code"              # The agent
+cask "corretto@21"              # Java 21
+cask "dbeaver-community"        # DBM GUI
+cask "docker-desktop"           # Container Engine
+cask "ghostty"                  # The terminal
+
+brew "bat"                      # Replaces cat
+brew "eza"                      # Replaces ls
+brew "fastfetch"                # Neofetch-like tool for displaying system information
+brew "gh"                       # GitHub CLI
+brew "git"                      # Version control
+brew "go"                       # Golang
+brew "lazydocker"               # Docker TUI
+brew "lazygit"                  # Git TUI
+brew "neovim"                   # Terminal editor
+brew "ripgrep"                  # Replaces grep
+brew "python@3.13"              # Python 3.13
+brew "powerlevel10k"            # Zsh theme
+brew "stow"                     # Symlink farm manager
+brew "tmux"                     # Terminal multiplexer
+brew "tree-sitter-cli"          # Needed for neovim
+brew "zoxide"                   # Replaces cd
+brew "zsh-autosuggestions"      # Self explanatory
+brew "zsh-syntax-highlighting"  # Terminal syntax highlighting

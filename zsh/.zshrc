@@ -15,6 +15,7 @@ alias reload-zsh="source ~/.zshrc"
 alias edit-zsh="nvim ~/.zshrc"
 alias c="clear"
 alias e="exit"
+alias ld="lazydocker"
 alias lg="lazygit"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
