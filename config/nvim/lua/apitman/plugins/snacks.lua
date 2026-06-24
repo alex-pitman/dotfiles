@@ -6,6 +6,7 @@ return {
   opts = {
     input = {},
     lazygit = {},
+    scroll = {},
   },
   keys = {
     {
