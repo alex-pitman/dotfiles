@@ -55,9 +55,9 @@ local function get_settings()
         },
         -- Set the import order for organizing imports (copy IntelliJ defaults)
         importOrder = {
-          "java",
-          "javax",
           "",
+          "javax",
+          "java",
           "#",
         },
       },
@@ -68,6 +68,13 @@ local function get_settings()
       -- Download sources for eclipse projects
       eclipse = {
         downloadSources = true,
+      },
+      format = {
+        enabled = true,
+        settings = {
+          url = vim.fn.stdpath("config") .. "/ftplugin/intellij-eclipse-style.xml",
+          profile = "Default",
+        },
       },
       -- Enable implementation count CodeLens ("all", "types", or "methods")
       implementationCodeLens = "types",
@@ -95,8 +102,10 @@ local function get_settings()
       },
       -- Prevent wildcarding imports
       sources = {
-        starThreshold = 9999,
-        staticThreshold = 9999,
+        organizeImports = {
+          starThreshold = 9999,
+          staticStarThreshold = 9999,
+        },
       },
     },
   }
@@ -160,7 +169,7 @@ local function setup_jdtls()
     setup_keymaps(bufnr)
 
     -- Refresh CodeLens
-    vim.lsp.codelens.refresh()
+    vim.lsp.codelens.enable(true, { bufnr = bufnr })
   end
 
   -- Create the jdtls config

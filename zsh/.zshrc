@@ -52,3 +52,11 @@ export NVM_DIR="$HOME/.nvm"
 
 alias tmc="cat ~/repos/dotfiles/tmux/tmux-cheatsheet.md"
 # export PATH="$HOME/go/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/alexander.pitman/.lmstudio/bin"
+# End of LM Studio CLI section
+
+jvm() {
+  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+}
