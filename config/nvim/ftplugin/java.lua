@@ -126,6 +126,7 @@ local function setup_keymaps(bufnr)
   map("n", "<leader>jt", jdtls.test_nearest_method, "[J]ava [T]est Method")
   map("n", "<leader>jT", jdtls.test_class, "[J]ava [T]est Class")
   map("n", "<leader>jb", jdtls.compile, "[J]ava [B]uild")
+  map("n", "<leader>ju", jdtls.update_project_config, "[J]ava [U]pdate project config")
 
   -- Visual mode keymaps
   map("v", "<leader>jm", function()

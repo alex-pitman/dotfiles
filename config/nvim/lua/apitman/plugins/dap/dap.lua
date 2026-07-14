@@ -51,11 +51,11 @@ return {
       desc = "Debug: Set Breakpoint",
     },
     {
-      "<F7>",
+      "<leader>dt",
       function()
         require("dapui").toggle()
       end,
-      desc = "Debug: See last session result.",
+      desc = "Debug: Toggle UI",
     },
     {
       "<leader>dgt",
